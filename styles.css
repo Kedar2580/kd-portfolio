@@ -507,9 +507,29 @@ a {
 .project-card:hover .project-content {
   transform: scale(1.1);
 }
-.project-section video::-webkit-media-controls-timeline {
-    display: none !important;
+/* ------------------------------------------------------------------------------- */
+/* Hide the entire control bar */
+.project-section video::-webkit-media-controls {
+  display: none !important;
 }
+
+/* Hide specific elements individually (if not hiding all) */
+.project-section video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-overflow-menu-button {
+  display: none !important;
+}
+
 #project1 {
   background: url(./Images/projects/p1.png);
   background-size: cover;
