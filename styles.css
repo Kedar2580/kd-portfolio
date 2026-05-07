@@ -507,7 +507,9 @@ a {
 .project-card:hover .project-content {
   transform: scale(1.1);
 }
-
+.project-section video::-webkit-media-controls-timeline {
+    display: none !important;
+}
 #project1 {
   background: url(./Images/projects/p1.png);
   background-size: cover;
