@@ -49,6 +49,7 @@
 }
 
 .logo {
+  display: block;
   width: 70px;
 }
 
@@ -507,7 +508,30 @@ a {
 .project-card:hover .project-content {
   transform: scale(1.1);
 }
+/* ----------------------------------------------------------------- */
+/* Hide the entire control bar on project section videos */
+.project-section video::-webkit-media-controls {
+  display: none !important;
+}
 
+/* Hide specific elements individually (if not hiding all) */
+.project-section video::-webkit-media-controls-timeline {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-fullscreen-button {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+.project-section video::-webkit-media-controls-overflow-menu-button {
+  display: none !important;
+}
+
+/* ---------------------------------------------- */
 #project1 {
   background: url(./Images/projects/p1.png);
   background-size: cover;
@@ -536,10 +560,11 @@ a {
 
 /* SKILLS */
 .skill-container {
+  height: auto;
   position: relative;
   display: flex;
   padding: 15rem;
-  margin: 10rem auto;
+  margin-top: 4rem auto;
   gap: 30px;
 }
 
@@ -560,6 +585,7 @@ a {
 }
 
 .skill-fade-text {
+  margin-top: 4rem ;
   position: absolute;
   color: rgb(231, 231, 231);
   font-size: 13em;
@@ -683,18 +709,14 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
 
 .footer-faded-text {
-  font-size: 5em;
   position: absolute;
-  left: 20px;
-  bottom: 0px;
+  left: 0;
+  bottom: 0;
   color: #535c87;
   user-select: none;
+  font-size: 5em;
 }
 
 .link-wrapper {
@@ -702,14 +724,24 @@ footer {
   gap: 1.2rem;
 }
 
+.link-wrapper div a {
+  color: white;
+  text-decoration: none;
+  transition: all 0.6s;
+}
+
+.link-wrapper div a:hover {
+  color: var(--bgOrange);
+}
+
 .icon-wrapper {
   display: flex;
-  gap: 1rem;
+  gap: 20px;
 }
 
 /* Responsive Format */
 
-@media (min-width: 100px) and (max-width: 768px) {
+/* @media (min-width: 100px) and (max-width: 768px) {
   .logo-container {
     width: 16%;
     justify-content: center;
@@ -1136,4 +1168,4 @@ footer {
   .project-card:hover .project-content {
     scale: 0.55;
   }
-}
+} */
