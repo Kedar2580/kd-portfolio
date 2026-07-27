@@ -586,7 +586,7 @@ a {
 }
 
 .skill-fade-text {
-  margin-top: 4rem ;
+  margin-top: 4rem;
   position: absolute;
   color: rgb(231, 231, 231);
   font-size: 13em;
@@ -694,50 +694,85 @@ a {
 }
 
 /* FOOTER */
-footer {
+.site-footer {
   position: relative;
-  margin-top: -1px;
-  background: #343d68;
-  padding-top: 5rem;
-  padding-bottom: 0rem;
-  padding: 5rem;
+  background: #111827;
+  color: #f3f4f6;
+
+  padding: 3rem 0 3.4rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.footer-faded-name {
+  position: absolute;
+  right: 1rem;
+  bottom: 0.2rem;
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  user-select: none;
 }
 
 .footer-wrapper {
   display: flex;
-  gap: 1rem;
-  padding: 1.2rem;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.footer-faded-text {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: #535c87;
-  user-select: none;
-  font-size: 5em;
-}
-
-.link-wrapper {
+.footer-brand {
   display: flex;
-  gap: 1.2rem;
+  flex-direction: column;
+  gap: 0.2rem;
 }
 
-.link-wrapper div a {
-  color: white;
+.footer-logo {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: all 0.6s;
 }
 
-.link-wrapper div a:hover {
+.footer-brand p {
+  color: #9ca3af;
+  font-size: 1rem;
+}
+
+.footer-note {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  margin-top: 0.1rem;
+}
+
+.footer-links,
+.footer-socials {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer-links a,
+.footer-socials a {
+  color: #d1d5db;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-socials a:hover {
   color: var(--bgOrange);
 }
 
-.icon-wrapper {
-  display: flex;
-  gap: 20px;
+@media (max-width: 768px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Responsive Format */
