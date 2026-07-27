@@ -13,18 +13,35 @@
     <div class="wrapper" id="top">
       <div class="container">
         <!-- NAVBAR -->
-        <div class="navbar">
-          <div class="logo-container">
-            <img src="Images/userAsset/Ke1.png" class="logo" />
-            <div class="logo-text">edar Paunikar</div>
-          </div>
+        <nav class="navbar" aria-label="Main navigation">
+          <a href="#top" class="logo-container">
+            <!-- <img src="Images/userAsset/Ke1.png" class="logo" alt="Kedar logo" /> -->
 
-          <div class="nav-items">
-            <div><a href="#project">Project</a></div>
-            <div><a href="#skills">Skills</a></div>
-            <div><a href="#contactme">Contact Me</a></div>
+             <!-- added logo -->
+            <img src="Images/userAsset/kp.png" class="logo" alt="Kedar logo" />
+
+            <!-- <div class="logo-text">edar Paunikar</div> -->
+          </a>
+
+          <button
+            class="menu-toggle"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+
+          <div class="nav-items" id="nav-links">
+            <a href="#top">Home</a>
+            <a href="#project">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="https://drive.google.com/file/d/17r6FBVkrbIwuF_YgHTvQ3C9-GkCYiTgV/view?usp=drive_link" target="_blank">Resume</a>
+            <a href="#contactme">Contact</a>
+
           </div>
-        </div>
+        </nav>
       </div>
 
       <!-- HERO SECTON LEFT -->
@@ -500,6 +517,16 @@
         backSpeed: 80,
         backDelay: 500,
       });
+
+      const toggleButton = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-items");
+
+      if (toggleButton && navLinks) {
+        toggleButton.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("active");
+          toggleButton.setAttribute("aria-expanded", isOpen);
+        });
+      }
     </script>
   </body>
 </html>
